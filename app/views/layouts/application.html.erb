@@ -16,9 +16,9 @@
     <%= render "shared/nav", location: 'top' %>
     <%= login_helper %>
     <%= yield %>
+    
+    <%= source_helper("application") %>
     <hr>
     <%= copyright_generator %>
-    <%= source_helper("application") %>
-  
   </body>
 </html>
