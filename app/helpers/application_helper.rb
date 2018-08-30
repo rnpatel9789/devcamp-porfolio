@@ -14,4 +14,7 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end 
+  def copyright_generator
+    RaviViewTool::Renderer.copyright 'Ravi Narayan Patel', 'All Rights Reversed.'
+  end 
 end
