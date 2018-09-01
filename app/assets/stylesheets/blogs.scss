@@ -1,9 +1,5 @@
-/* 
-  Custom bootstrap variables must be set or imported *before* bootstrap. 
-*/
-
 @import "bootstrap";
-
+@import "font-awesome";
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
@@ -148,4 +144,12 @@ h6 {
 
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+
+/*
+* Custom style
+*/
+
+.social-links li {
+  font-size: 2em;
 }
