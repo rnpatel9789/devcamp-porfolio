@@ -13,11 +13,19 @@
 
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <div id="background"></div>    
-          <%= render "shared/application_nav" %>
-          <%= yield %>
-          <%= render "shared/application_footer" %>
-          <%= source_helper("application") %>
+      <%= video_tag(
+          'HardDrivePhotojpeg.mp4',
+          id: 'background',
+          autoplay: true,
+          loop: true,
+          muted: true,
+          poster: 'home_bg.png'
+        ) 
+        %>    
+      <%= render "shared/application_nav" %>
+      <%= yield %>
+      <%= render "shared/application_footer" %>
+      <%= source_helper("application") %>
     </div>
   </body>
 </html>
