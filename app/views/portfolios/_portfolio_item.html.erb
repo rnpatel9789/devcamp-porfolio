@@ -1,17 +1,19 @@
 <div class="col-md-4">
-  <div class="card mb-4 shadow-sm">
+  <div class="card mb-4 shadow-sm" data-id="<%= portfolio_item.id %>">
     <%= image_tag portfolio_item.thumb_image, class:"card-img-top" unless portfolio_item.thumb_image.nil? %>
     <div class="card-body">
       <p class="card-text">
         <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span>
         <%= portfolio_item.subtitle %>
       </p>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "btn btn-sm btn-outline-secondary" if logged_in?(:site_admin) %>
+      <% if logged_in?(:site_admin) %>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: "btn btn-sm btn-outline-secondary" %>
+          </div>
+          <small class="text-muted"><%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %></small>
         </div>
-        <small class="text-muted"><%= distance_of_time_in_words(portfolio_item.created_at, Time.now) %></small>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
