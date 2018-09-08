@@ -27,3 +27,6 @@
 
 # I don't want to show my secrets 
 /config/secrets.yml
+
+# Ignore .env file 
+.env
