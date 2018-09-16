@@ -5,6 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create!(
+  email: 'ravi@test.com',
+  password: 'ravi123',
+  password_confirmation: 'ravi123',
+  name: 'Admin User',
+  roles: 'site_admin'
+)
+
+puts "1 Admin User created"
+
+User.create!(
+  email: 'test@test.com',
+  password: 'test123',
+  password_confirmation: 'test123',
+  name: 'Test User'
+)
+
+puts "1 Regular User created"
+
+
 
 3.times do |topic|
     Topic.create!(
@@ -54,6 +74,7 @@ puts "5 Skills created successfully."
         thumb_image:"https://via.placeholder.com/350x200" 
     )
 end 
+
 1.times do |portfolio_item|
     Portfolio.create!(
         title: "Portfolio Title #{portfolio_item+1}" ,
@@ -77,3 +98,4 @@ puts "9 Portfolio item created successfully."
 end
 
 puts "3 Technologies created successfully"
+
