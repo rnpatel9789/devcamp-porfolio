@@ -1,3 +1,3 @@
 module Placeholder 
-  extends ActiveSupport::Concern 
+  extend ActiveSupport::Concern 
 end 
