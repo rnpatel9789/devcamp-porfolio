@@ -76,3 +76,11 @@ footer p {
 .portfolio-container {
   padding: 30px;
 }
+
+.grad-color {
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+body {
+  background-image: image-url('home_background.jpg');
+}
