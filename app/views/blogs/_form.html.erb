@@ -5,29 +5,29 @@
     <% end %>
   <% end %>
 
-  <div class="form-group">
-    <%= form.text_field :title, class: 'form-control', Placeholder: "Title" %>
+  <div class="form-group inherit-background">
+    <%= form.text_field :title, class: 'form-control inherit-background', Placeholder: "Title" %>
   </div>
   
-  <div class="form-group">
+  <div class="form-group inherit-background">
     <%= form.label :topic_id %>
     <%= form.collection_select(:topic_id, Topic.all, :id, :title,
                               {
                                 selected: blog.topic_id,
                                 include_blank: true
                               },
-                              class: "form-control"
+                              class: "form-control inherit-background"
       ) %>
   </div>
-  <div class="form-group">
+  <div class="form-group inherit-background">
     <%= form.radio_button :status, 'draft' %>
     <%= form.label :status, "Draft" %>
     
     <%= form.radio_button :status, 'published' %>
     <%= form.label :status, "Published" %>
   </div>
-  <div class="form-group">
-    <%= form.text_area :body, class: 'form-control', rows: 10, Placeholder: "Body" %>
+  <div class="form-group inherit-background">
+    <%= form.text_area :body, class: 'form-control inherit-background', rows: 10, Placeholder: "Body" %>
   </div>
 
   <div class="form-group">

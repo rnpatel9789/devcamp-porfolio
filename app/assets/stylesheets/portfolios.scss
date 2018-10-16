@@ -78,9 +78,18 @@ footer p {
 }
 
 .grad-color {
-  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-image: linear-gradient(to right, blue, violet, orange);
 }
 
 body {
   background-image: image-url('home_background.jpg');
+}
+
+.inherit-background {
+  background-color: inherit;
+  color: white;
+}
+.portfolio-card {
+  background-color: inherit;
+  color: white;
 }

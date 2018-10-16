@@ -148,9 +148,8 @@ h6,
 .blog-footer {
   margin-top: 20px;
   padding: 2.5rem 0;
-  color: #999;
+  color: white;
   text-align: center;
-  background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
 }
 
@@ -193,9 +192,21 @@ h6,
 }
 
 .grad-color {
-  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-image: linear-gradient(to right, blue, violet, orange);
 }
 
 body {
   background-image: image-url('home_background.jpg');
+}
+
+.inherit-background {
+  background-color: inherit;
+  color: white;
+}
+
+.blog-body {
+  color: white;
+  text-align: justify;
+  background-color: inherit;
+  padding: 10px;
 }

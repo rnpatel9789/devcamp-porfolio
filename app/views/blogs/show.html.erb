@@ -2,7 +2,7 @@
   <h2><%= @blog.title %></h2>
   
   <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
+    <ol class="breadcrumb inherit-background">
       <li class="breadcrumb-item"><%= link_to 'Home', root_path %></li>
       <li class="breadcrumb-item"><%= link_to @blog.topic.title, topic_path(@blog.topic) %></li>
       <li class="breadcrumb-item active" aria-current="page"><%= @blog.title %></li>
@@ -14,9 +14,9 @@
     </ol>
   </nav>
   <%#= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-  <p>
-    <%= markdown @blog.body %>
-  </p>
+  <div class="card blog-body">
+    <p> <%= markdown @blog.body %> </p>
+  </div>
   <%= render 'comments/comment_form' %>
   <div id='comments' data-blog-id="<%= @blog.id %>">
     <%= render @blog.comments %>  
