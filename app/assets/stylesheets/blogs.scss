@@ -146,8 +146,7 @@ h6,
  */
 
 .blog-footer {
-  margin-top: 20px;
-  padding: 2.5rem 0;
+  padding: 2rem;
   color: white;
   text-align: center;
   border-top: .05rem solid #e5e5e5;
@@ -197,6 +196,7 @@ h6,
 
 body {
   background-image: image-url('home_background.jpg');
+  background-size: cover;
 }
 
 .inherit-background {
@@ -209,4 +209,9 @@ body {
   text-align: justify;
   background-color: inherit;
   padding: 10px;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: white;
 }
